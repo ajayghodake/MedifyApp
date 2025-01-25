@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import HospitalSearch from "../components/HospitalSearch/HospitalSearch";
 import HeroServices from "../components/HeroServices/HeroServices";
+import OffersSwiper from "../components/Sections/OffersSwiper/OffersSwiper";
 export default function Home() {
   return (
     <div>
@@ -34,6 +35,7 @@ export default function Home() {
             </Stack>
           </Container>
         </Box>
+        <OffersSwiper />
       </Box>
     </div>
   );
