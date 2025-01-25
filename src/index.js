@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import reportWebVitals from "./reportWebVitals";
-import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Home from "./Home/Home";
 import Search from "./Search/Search";
@@ -142,7 +141,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       <RouterProvider router={routes} />
     </ThemeProvider>
   </React.StrictMode>

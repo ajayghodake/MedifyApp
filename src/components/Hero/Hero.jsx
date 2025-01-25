@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography, Button, Link } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import HeroImg from '../../assets/hero.png'
+import HeroImg from '../../assets/home.webp'
 import 'swiper/css';
 
 export default function Hero() {

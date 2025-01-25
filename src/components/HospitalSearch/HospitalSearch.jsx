@@ -82,7 +82,7 @@ export default function HospitalSearch() {
         required
         sx={{ minWidth: 200, width: "100%" }}
       >
-        <MenuItem value="" disabled>
+        <MenuItem value="" selected disabled>
           State
         </MenuItem>
         {states.map((state) => (
@@ -106,7 +106,9 @@ export default function HospitalSearch() {
         required
         sx={{ minWidth: 200, width: "100%" }}
       >
-        <MenuItem value="" disabled>City</MenuItem>
+        <MenuItem value="" selected disabled>
+          City
+        </MenuItem>
         {cities.map((city) => (
           <MenuItem key={city} value={city}>
             {city}
@@ -114,7 +116,14 @@ export default function HospitalSearch() {
         ))}
       </Select>
 
-      <Button type="submit" variant="contained" size="large" startIcon={<SearchIcon/>} sx={{py: '15px', px: 8}} disableElevation>
+      <Button
+        type="submit"
+        variant="contained"
+        size="large"
+        startIcon={<SearchIcon />}
+        sx={{ py: "15px", px: 8, flexShrink: 0 }}
+        disableElevation
+      >
         Search
       </Button>
     </Box>
