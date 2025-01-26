@@ -7,6 +7,7 @@ import HeroServices from "../components/HeroServices/HeroServices";
 import OffersSwiper from "../components/Sections/OffersSwiper/OffersSwiper";
 import Specilization from "../components/Sections/Spelizations/Specilization";
 import Specialists from "../components/Sections/Specialists/Specialists";
+import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
 export default function Home() {
   return (
     <div>
@@ -40,6 +41,7 @@ export default function Home() {
         <OffersSwiper />
         <Specilization />
         <Specialists />
+        <PatientCaring />
       </Box>
     </div>
   );
