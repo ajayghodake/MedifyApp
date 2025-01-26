@@ -8,6 +8,7 @@ import OffersSwiper from "../components/Sections/OffersSwiper/OffersSwiper";
 import Specilization from "../components/Sections/Spelizations/Specilization";
 import Specialists from "../components/Sections/Specialists/Specialists";
 import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
+import Blogs from "../components/Sections/Blogs/Blogs";
 export default function Home() {
   return (
     <div>
@@ -42,6 +43,7 @@ export default function Home() {
         <Specilization />
         <Specialists />
         <PatientCaring />
+        <Blogs/>
       </Box>
     </div>
   );
