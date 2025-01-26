@@ -6,6 +6,7 @@ import HospitalSearch from "../components/HospitalSearch/HospitalSearch";
 import HeroServices from "../components/HeroServices/HeroServices";
 import OffersSwiper from "../components/Sections/OffersSwiper/OffersSwiper";
 import Specilization from "../components/Sections/Spelizations/Specilization";
+import Specialists from "../components/Sections/Specialists/Specialists";
 export default function Home() {
   return (
     <div>
@@ -38,6 +39,7 @@ export default function Home() {
         </Box>
         <OffersSwiper />
         <Specilization />
+        <Specialists />
       </Box>
     </div>
   );
