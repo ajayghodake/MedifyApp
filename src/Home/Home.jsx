@@ -10,6 +10,7 @@ import Specialists from "../components/Sections/Specialists/Specialists";
 import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
 import Blogs from "../components/Sections/Blogs/Blogs";
 import OurFamilies from "../components/Sections/OurFamilies/OurFamilies";
+import FAQ from "../components/Sections/FAQ/FAQ";
 export default function Home() {
   return (
     <div>
@@ -46,6 +47,7 @@ export default function Home() {
         <PatientCaring />
         <Blogs/>
         <OurFamilies/>
+        <FAQ/>
       </Box>
     </div>
   );
