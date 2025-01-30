@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <CssBaseline />
-      <Outlet/>
+      <Outlet/> {/* This is Placeholder - This is where the child components will be rendered */}
       <DownloadSection/>
       <Footer/>
       <DevInfo/>

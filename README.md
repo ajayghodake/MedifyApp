@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Project: MedifyApp
+
+### Description
+MedifyApp is a frontend application designed to facilitate booking appointments in hospitals by searching for state and city. The appointments are saved in localStorage for easy retrieval. The project does not include login and registration functionalities.
+
+### Features
+- Search for hospitals by state and city.
+- Book appointments using a date and time picker.
+- View booked appointments.
+
+### Technologies Used
+- React.js
+- Material-UI
+- React Router
+- HTML
+- CSS
+
+### Workflow
+1. User lands on the homepage.
+2. User searches for hospitals by selecting state and city.
+3. User books an appointment by choosing a date and time.
+4. Booked appointments are saved in localStorage and can be viewed later.
+
+### Highlights
+- Developed a responsive and user-friendly UI using Material-UI.
+- Implemented state management and routing with React Router.
+- Utilized localStorage for persisting user data without backend integration.
+
+This project demonstrates proficiency in React.js and frontend development, showcasing the ability to build interactive and dynamic web applications.
