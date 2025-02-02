@@ -81,7 +81,7 @@ export default function Search() {
               <Typography component="h1" fontSize={24} lineHeight={1.1} mb={2} fontWeight={500}>
                 {`${hospitals.length} Medical Centers available in `}
                 <span style={{ textTransform: "capitalize"}}>
-                  {city.toLowerCase()}
+                  {city.toLocaleLowerCase()}
                 </span>
               </Typography>
               <Stack direction="row" spacing={2}>
