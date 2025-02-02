@@ -53,7 +53,7 @@ export default function HospitalSearch() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.state && formData.city) {
-      navigate(`/search?State=${formData.state}&city=${formData.city}`);
+      navigate(`/search?state=${formData.state}&city=${formData.city}`);
     }
   };
 

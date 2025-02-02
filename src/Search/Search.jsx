@@ -20,11 +20,11 @@ export default function Search() {
   const [bookingDetails, setBookingDetails] = useState({});
   const [showBookingSuccess, setShowBookingSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState();
+  // const [error, setError] = useState();
   
   const slotsAvailable = {
     morning: ["11:30 am"],
-    afternoon: ["12:00 PM, 12:30 PM, 1:30 PM, 2:00 PM, 2:30 PM", "3:30 PM"],
+    afternoon: ["12:00 PM", "12:30 PM", "1:30 PM", "2:00 PM", "2:30 PM", "3:30 PM"],
     evening: ["6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM"],
   };
 
@@ -32,6 +32,8 @@ export default function Search() {
   console.log("State", state);
   console.log("city", city);
   console.log("Hospitals" ,hospitals);
+
+
 
   useEffect(() => {
     const getHospitals = async () => {
@@ -42,7 +44,8 @@ export default function Search() {
         setHospitals(res.data);
         setIsLoading(false);
       } catch(error) {
-        setError(error);
+        // setError(error);
+        console.error(error);
         setIsLoading(false);
       }     
     }
@@ -57,7 +60,7 @@ export default function Search() {
     setCity(searchParams.get("city"));
   }, [searchParams]);
 
-  const handleBookingModal = (details) => {
+  const handleBooking = (details) => {
     setBookingDetails(details);
     setModalOpen(true);
   };
@@ -75,7 +78,7 @@ export default function Search() {
         <Container maxWidth="xl" sx={{ pt: 8, pb: 10, px: {xs: 0, md:4} }}>
            {hospitals.length > 0 && (
             <Box sx={{mb: 3}}>
-              <Typography component="h1"fontSize={24} lineHeight={1.1} mb={2} fontWeight={200}>
+              <Typography component="h1" fontSize={24} lineHeight={1.1} mb={2} fontWeight={500}>
                 {`${hospitals.length} Medical Centers available in `}
                 <span style={{ textTransform: "capitalize"}}>
                   {city.toLocaleLowerCase()}
@@ -94,7 +97,7 @@ export default function Search() {
            <Stack alignItems="flex-start" direction={{md : "row"}}>
             <Stack  mb={{xs: 4, md: 0}} spacing={3} width={{xs: 1, md: "calc(100% - 384px)"}} mr="24px">
               {hospitals.map((hospital) => (
-                <HospitalCard key={hospital["Hospital Name"]} details={hospital} slotsAvailable={slotsAvailable} handleBookingModal={handleBookingModal}/>
+                <HospitalCard key={hospital["Hospital Name"]} details={hospital} slotsAvailable={slotsAvailable} handleBooking={handleBooking}/>
               ))}
 
               {isLoading && (
