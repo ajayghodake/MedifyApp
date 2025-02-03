@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { format, add, isEqual, startOfDay } from "date-fns";
 import styles from "./DayPicker.module.css";
+import {SliderNextBtn, SliderPrevBtn} from './SliderBtn';
 
 const DayPicker = ({ selectedDate, setSelectedDate, totalSlots }) => {
   const date = startOfDay(new Date());
@@ -78,12 +79,12 @@ const DayPicker = ({ selectedDate, setSelectedDate, totalSlots }) => {
         ))}
         <span slot="container-start">
           <Box display={{ xs: "none", md: "block" }}>
-            {/* <SlidePrevButton /> */}
+            <SliderNextBtn />
           </Box>
         </span>
         <span slot="container-end">
           <Box display={{ xs: "none", md: "block" }}>
-            {/* <SlideNextButton /> */}
+            <SliderPrevBtn />
           </Box>
         </span>
       </Swiper>
