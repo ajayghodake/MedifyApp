@@ -16,6 +16,7 @@ export default function BookingModal({
   setShowBookingSuccess,
 }) {
   const [email, setEmail] = useState("");
+
   const handleBooking = (e) => {
     e.preventDefault();
     triggerEvent();
@@ -33,20 +34,22 @@ export default function BookingModal({
     setOpen(false);
   };
 
+  // To access this we have to create account on GTM(Google Tag Manager)
+  // By GTM we can send the event data when an action occurs
   // triggerEvent Copied from the Reference Project
   const triggerEvent = () => {
-       // Ensure dataLayer is defined
+    // Ensure dataLayer is defined
     window.dataLayer = window.dataLayer || [];
-// Function to push the first_visit event to the dataLayer
-    function triggerFirstVisitEvent(){
-        window.dataLayer.push({
-          event: "First_Event",
-          eventDate: new Date().toISOString(), // Optional: track the exact time of the event
-        })
+    // Function to push the first_visit event to the dataLayer
+    function triggerFirstVisitEvent() {
+      window.dataLayer.push({
+        event: "First_Event",
+        eventDate: new Date().toISOString(), // Optional: track the exact time of the event
+      });
     }
 
     triggerFirstVisitEvent();
-  }
+  };
 
   return (
     <Modal open={open} onClose={() => setOpen(false)}>
