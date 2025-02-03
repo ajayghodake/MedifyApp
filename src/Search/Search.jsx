@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Snackbar, Stack, Typography } from "@mui/material";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -9,6 +9,7 @@ import SideOffer from '../assets/offers/cta.png';
 import HospitalSearch from '../components/HospitalSearch/HospitalSearch';
 import HospitalCard from '../components/HospitalCard/HospitalCard';
 import BookingModal from '../components/BookingModal/BookingModal';
+import SnackbarAuto from '../components/SnackbarAuto/SnackbarAuto';
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -119,6 +120,7 @@ export default function Search() {
         </Container>
 
         <BookingModal open={modalOpen} setOpen={setModalOpen} bookingDetails={bookingDetails} setShowBookingSuccess={setShowBookingSuccess} />
+        <SnackbarAuto open={showBookingSuccess} setOpen={setShowBookingSuccess} message="Booking Successful"/>
       </Box>
     </Box>
   )
